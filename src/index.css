@@ -2,97 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mahaya Amaal International FZC - Industrial Design System
-   All colors HSL. Dark industrial enterprise aesthetic. */
+/* Mahaya Amaal International FZC — Premium GCC Industrial Procurement
+   Calm, corporate dark-mode design system. All colors HSL. */
 
 @layer base {
   :root {
-    /* Dark industrial base */
-    --background: 213 27% 7%;        /* #0d1117 */
-    --foreground: 210 20% 92%;
+    /* Surfaces — #0B1220 / #111827 / #161F2E */
+    --background: 218 38% 8%;
+    --foreground: 210 40% 98%;          /* #F8FAFC */
 
-    --card: 215 21% 11%;             /* #161b22 */
-    --card-foreground: 210 20% 92%;
+    --surface: 220 32% 12%;              /* #111827 */
+    --card: 218 30% 14%;                 /* #161F2E */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 215 21% 11%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 218 30% 14%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Industrial green */
-    --primary: 167 100% 38%;         /* #00c49a */
-    --primary-foreground: 213 27% 7%;
-    --primary-glow: 167 100% 50%;
+    /* Accents */
+    --primary: 165 100% 36%;             /* #00B894 */
+    --primary-foreground: 218 38% 8%;
 
-    /* Steel blue */
-    --secondary: 210 100% 50%;       /* #0088ff */
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 221 83% 53%;            /* #2563EB */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 18% 16%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 220 28% 16%;
+    --muted-foreground: 215 20% 65%;     /* ~#94A3B8 */
 
-    --accent: 167 100% 38%;
-    --accent-foreground: 213 27% 7%;
+    --accent: 165 100% 36%;
+    --accent-foreground: 218 38% 8%;
 
-    /* Alert system */
-    --warning: 42 100% 47%;          /* #f0a500 amber */
-    --warning-foreground: 213 27% 7%;
-    --destructive: 6 78% 57%;        /* #e74c3c */
-    --destructive-foreground: 210 20% 98%;
-    --success: 167 100% 38%;
+    --warning: 38 92% 50%;               /* #F59E0B */
+    --warning-foreground: 218 38% 8%;
+    --destructive: 0 84% 60%;            /* #EF4444 */
+    --destructive-foreground: 210 40% 98%;
+    --success: 165 100% 36%;
 
-    --border: 215 18% 18%;
-    --input: 215 18% 16%;
-    --ring: 167 100% 38%;
+    --border: 220 20% 22%;               /* used by shadcn — rgba(255,255,255,~0.08) feel */
+    --hairline: 0 0% 100%;               /* used with /8 opacity for ultra-subtle */
+    --input: 220 28% 16%;
+    --ring: 165 100% 36%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(213 27% 7%) 0%, hsl(215 30% 10%) 50%, hsl(213 27% 5%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(167 100% 38%), hsl(180 100% 40%));
-    --gradient-steel: linear-gradient(135deg, hsl(215 30% 12%), hsl(215 25% 18%));
-    --gradient-alert: linear-gradient(90deg, hsl(6 78% 57% / 0.15), transparent);
-    --gradient-radial: radial-gradient(circle at 50% 0%, hsl(167 100% 38% / 0.12), transparent 60%);
+    /* Soft gradients */
+    --gradient-hero: radial-gradient(120% 80% at 80% 0%, hsl(165 100% 36% / 0.10), transparent 60%),
+                     radial-gradient(80% 60% at 0% 100%, hsl(221 83% 53% / 0.08), transparent 60%),
+                     linear-gradient(180deg, hsl(218 38% 8%), hsl(220 32% 10%));
+    --gradient-card: linear-gradient(180deg, hsl(218 30% 15%), hsl(218 30% 12%));
 
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(167 100% 38% / 0.25);
-    --shadow-card: 0 4px 24px hsl(213 27% 3% / 0.6);
-    --shadow-elevated: 0 20px 60px -10px hsl(213 27% 3% / 0.8);
+    --shadow-sm: 0 1px 2px hsl(218 50% 4% / 0.4);
+    --shadow-card: 0 6px 24px -8px hsl(218 50% 3% / 0.6);
+    --shadow-elevated: 0 24px 60px -20px hsl(218 50% 2% / 0.8);
 
     /* Motion */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-snap: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-    --sidebar-background: 215 21% 11%;
-    --sidebar-foreground: 210 20% 92%;
-    --sidebar-primary: 167 100% 38%;
-    --sidebar-primary-foreground: 213 27% 7%;
-    --sidebar-accent: 215 18% 16%;
-    --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 215 18% 18%;
-    --sidebar-ring: 167 100% 38%;
+    --sidebar-background: 220 32% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 165 100% 36%;
+    --sidebar-primary-foreground: 218 38% 8%;
+    --sidebar-accent: 220 28% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 22%;
+    --sidebar-ring: 165 100% 36%;
   }
 
-  .dark {
-    /* same as root - app is dark by default */
-    --background: 213 27% 7%;
-    --foreground: 210 20% 92%;
-    --card: 215 21% 11%;
-    --card-foreground: 210 20% 92%;
-    --popover: 215 21% 11%;
-    --popover-foreground: 210 20% 92%;
-    --primary: 167 100% 38%;
-    --primary-foreground: 213 27% 7%;
-    --secondary: 210 100% 50%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 18% 16%;
-    --muted-foreground: 215 15% 60%;
-    --accent: 167 100% 38%;
-    --accent-foreground: 213 27% 7%;
-    --destructive: 6 78% 57%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 18% 18%;
-    --input: 215 18% 16%;
-    --ring: 167 100% 38%;
-  }
+  .dark { /* app is dark by default — same as :root */ }
 }
 
 @layer base {
@@ -103,101 +79,89 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-feature-settings: 'ss01', 'cv11';
   }
 
-  h1, h2, h3, h4, h5, h6, .display {
-    font-family: 'Barlow Condensed', 'Inter', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
-  .mono { font-family: 'JetBrains Mono', monospace; }
+  h1 { letter-spacing: -0.03em; }
+
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+  ::selection { background: hsl(var(--primary) / 0.3); }
 }
 
 @layer components {
-  /* Industrial grid background */
-  .grid-bg {
-    background-image:
-      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
-    background-size: 48px 48px;
+  /* Hairline border using true white at low opacity for premium feel */
+  .hairline { border-color: hsl(var(--hairline) / 0.08); }
+  .hairline-b { border-bottom: 1px solid hsl(var(--hairline) / 0.08); }
+  .hairline-t { border-top: 1px solid hsl(var(--hairline) / 0.08); }
+
+  .surface { background-color: hsl(var(--surface)); }
+
+  /* Premium card — quiet, no glow, soft hover */
+  .card-premium {
+    @apply relative rounded-xl border bg-card transition-all duration-300;
+    border-color: hsl(var(--hairline) / 0.08);
+    box-shadow: var(--shadow-card);
   }
-  .grid-bg-fine {
-    background-image:
-      linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
-    background-size: 24px 24px;
+  .card-premium:hover {
+    border-color: hsl(var(--hairline) / 0.16);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
   }
 
-  .radial-glow {
-    background: var(--gradient-radial);
+  /* Subtle eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.2em] uppercase;
+    color: hsl(var(--primary));
   }
-
-  .glass-panel {
-    @apply bg-card/60 backdrop-blur-xl border border-border/60;
-  }
-
-  .industrial-card {
-    @apply relative bg-card border border-border/80 transition-all duration-300;
-    @apply hover:border-primary/60 hover:shadow-[0_0_30px_hsl(var(--primary)/0.15)];
-  }
-
-  .industrial-card::before {
+  .eyebrow::before {
     content: '';
-    @apply absolute top-0 left-0 w-8 h-px bg-primary;
-  }
-  .industrial-card::after {
-    content: '';
-    @apply absolute top-0 left-0 w-px h-8 bg-primary;
+    @apply inline-block h-px w-6;
+    background: hsl(var(--primary));
   }
 
-  .label-tag {
-    @apply inline-flex items-center gap-2 px-3 py-1 text-[11px] font-semibold tracking-widest uppercase;
-    @apply border border-primary/30 bg-primary/5 text-primary;
+  /* Section padding rhythm */
+  .section { @apply py-20 md:py-28; }
+  .section-tight { @apply py-16 md:py-20; }
+
+  /* Soft dotted background for hero */
+  .dot-grid {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
-  .ticker-track {
-    animation: ticker 50s linear infinite;
+  /* Button reset utilities */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg font-medium text-sm;
+    @apply bg-primary text-primary-foreground transition-all duration-200;
   }
+  .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
 
-  .pulse-dot {
-    @apply relative;
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg font-medium text-sm;
+    @apply text-foreground transition-all duration-200;
+    border: 1px solid hsl(var(--hairline) / 0.12);
   }
-  .pulse-dot::after {
-    content: '';
-    @apply absolute inset-0 rounded-full bg-current opacity-75;
-    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
+  .btn-ghost:hover { border-color: hsl(var(--hairline) / 0.28); background: hsl(var(--hairline) / 0.04); }
 
-  .scan-line::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.08), transparent);
-    background-size: 100% 8px;
-    pointer-events: none;
-    animation: scan 6s linear infinite;
+  /* Link arrow */
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-all;
   }
+  .link-arrow:hover { gap: 0.5rem; }
 }
 
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@keyframes ping {
-  75%, 100% { transform: scale(2.2); opacity: 0; }
-}
-@keyframes scan {
-  0% { background-position: 0 -100%; }
-  100% { background-position: 0 200%; }
-}
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5); }
-  50% { box-shadow: 0 0 0 12px hsl(var(--primary) / 0); }
-}
+/* Restrained animation set */
+@keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.animate-fade-up { animation: fade-up 0.7s var(--ease-out) both; }
+.animate-fade-in { animation: fade-in 0.6s ease-out both; }
+.animate-marquee { animation: marquee 60s linear infinite; }

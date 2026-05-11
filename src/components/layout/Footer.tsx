@@ -1,37 +1,42 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export const Footer = () => (
-  <footer className="relative mt-32 border-t border-border bg-card/40">
-    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-    <div className="container py-16 grid gap-12 lg:grid-cols-5">
-      <div className="lg:col-span-2">
-        <div className="flex items-center gap-2.5 mb-4">
-          <div className="h-9 w-9 grid place-items-center bg-gradient-primary text-primary-foreground font-display font-black">M</div>
-          <div className="font-display font-bold tracking-wider">MAHAYA AMAAL INTERNATIONAL FZC</div>
+  <footer className="hairline-t mt-24 bg-surface">
+    <div className="container py-16 grid gap-12 lg:grid-cols-12">
+      <div className="lg:col-span-4">
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-9 w-9 grid place-items-center rounded-md bg-primary/10 border border-primary/30 text-primary font-display font-bold">M</div>
+          <div className="leading-tight">
+            <div className="font-display font-semibold">Mahaya Amaal</div>
+            <div className="text-[10px] text-muted-foreground tracking-[0.18em] uppercase">International FZC</div>
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
-          GCC industrial procurement & supply chain intelligence. Emergency sourcing across
-          Schneider, ABB, Siemens, Eaton, Mitsubishi and Rockwell — built for Vision 2030 megaprojects.
+        <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+          Strategic industrial procurement and supply chain support for the GCC's most demanding
+          infrastructure, energy and manufacturing operations.
         </p>
-        <div className="mt-6 space-y-2 text-sm">
-          <div className="flex items-center gap-2 text-muted-foreground"><MapPin className="h-4 w-4 text-primary"/>SAIF Zone, Sharjah, United Arab Emirates</div>
-          <div className="flex items-center gap-2 text-muted-foreground"><Phone className="h-4 w-4 text-primary"/>+971 (0) 6 000 0000</div>
-          <div className="flex items-center gap-2 text-muted-foreground"><Mail className="h-4 w-4 text-primary"/>rfq@mahaya-amaal.com</div>
+        <div className="mt-6 space-y-2.5 text-sm">
+          <div className="flex items-start gap-2.5"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0"/><span><span className="text-foreground">Sharjah HQ</span> · SAIF Zone, UAE</span></div>
+          <div className="flex items-start gap-2.5"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0"/><span><span className="text-foreground">Dubai Office</span> · Business Bay, UAE</span></div>
+          <div className="flex items-center gap-2.5"><Phone className="h-4 w-4 text-primary shrink-0"/><a href="tel:+971600000000" className="text-muted-foreground hover:text-foreground">+971 6 000 0000</a></div>
+          <div className="flex items-center gap-2.5"><Mail className="h-4 w-4 text-primary shrink-0"/><a href="mailto:rfq@mahaya-amaal.com" className="text-muted-foreground hover:text-foreground">rfq@mahaya-amaal.com</a></div>
+          <div className="flex items-center gap-2.5"><MessageCircle className="h-4 w-4 text-primary shrink-0"/><a href="https://wa.me/971600000000" className="text-muted-foreground hover:text-foreground">WhatsApp Procurement Desk</a></div>
         </div>
       </div>
 
       <FooterCol title="Company" links={[["About","/about"],["Services","/services"],["Partner Program","/partner"],["Contact","/contact"]]} />
-      <FooterCol title="Capability" links={[["Brands","/brands"],["Industries","/industries"],["GCC Projects","/projects"],["RFQ Portal","/rfq"]]} />
-      <FooterCol title="Intelligence" links={[["Shortage Dashboard","/intelligence"],["Lead Time Matrix","/intelligence"],["Price Tracker","/intelligence"],["Reports","/intelligence"]]} />
+      <FooterCol title="Services" links={[["Emergency Procurement","/services"],["Obsolete & Legacy","/services"],["Multi-Brand Sourcing","/brands"],["Vision 2030 Support","/projects"]]} />
+      <FooterCol title="Industries" links={[["Oil & Gas","/industries"],["EPC & Construction","/industries"],["Utilities & Energy","/industries"],["Data Centers","/industries"]]} />
     </div>
 
-    <div className="border-t border-border/60">
+    <div className="hairline-t">
       <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-        <div className="mono">© {new Date().getFullYear()} MAHAYA AMAAL INTERNATIONAL FZC · ALL RIGHTS RESERVED</div>
-        <div className="flex items-center gap-2 mono uppercase tracking-widest">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"/>
-          GCC Procurement Operations · Live
+        <div>© {new Date().getFullYear()} Mahaya Amaal International FZC. All rights reserved.</div>
+        <div className="flex items-center gap-5">
+          <a href="#" className="hover:text-foreground">Privacy</a>
+          <a href="#" className="hover:text-foreground">Terms</a>
+          <a href="#" className="hover:text-foreground">Compliance</a>
         </div>
       </div>
     </div>
@@ -39,8 +44,8 @@ export const Footer = () => (
 );
 
 const FooterCol = ({ title, links }: { title: string; links: [string, string][] }) => (
-  <div>
-    <div className="text-xs font-display tracking-widest text-primary mb-4">{title.toUpperCase()}</div>
+  <div className="lg:col-span-2">
+    <div className="text-[11px] font-semibold tracking-[0.2em] uppercase text-foreground mb-4">{title}</div>
     <ul className="space-y-2.5">
       {links.map(([l, h]) => (
         <li key={l}><Link to={h} className="text-sm text-muted-foreground hover:text-primary transition-colors">{l}</Link></li>

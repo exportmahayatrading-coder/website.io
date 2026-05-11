@@ -3,12 +3,11 @@ import { ReactNode } from "react";
 export const PageHero = ({
   eyebrow, title, subtitle, children,
 }: { eyebrow: string; title: string; subtitle?: string; children?: ReactNode }) => (
-  <section className="relative overflow-hidden border-b border-border">
-    <div className="absolute inset-0 grid-bg opacity-40" />
-    <div className="absolute inset-0 radial-glow" />
+  <section className="relative overflow-hidden hairline-b bg-gradient-hero">
+    <div className="absolute inset-0 dot-grid opacity-40" />
     <div className="container relative py-20 lg:py-28">
-      <div className="label-tag mb-6">{eyebrow}</div>
-      <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[0.95] max-w-4xl">
+      <div className="eyebrow mb-5">{eyebrow}</div>
+      <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] max-w-4xl">
         {title}
       </h1>
       {subtitle && (
@@ -22,12 +21,12 @@ export const PageHero = ({
 export const Section = ({
   eyebrow, title, subtitle, children, className = "",
 }: { eyebrow?: string; title?: string; subtitle?: string; children: ReactNode; className?: string }) => (
-  <section className={`container py-20 lg:py-28 ${className}`}>
+  <section className={`container section ${className}`}>
     {(eyebrow || title) && (
       <div className="mb-12 max-w-3xl">
-        {eyebrow && <div className="label-tag mb-4">{eyebrow}</div>}
-        {title && <h2 className="font-display text-4xl md:text-5xl leading-tight">{title}</h2>}
-        {subtitle && <p className="mt-4 text-muted-foreground text-lg">{subtitle}</p>}
+        {eyebrow && <div className="eyebrow mb-4">{eyebrow}</div>}
+        {title && <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight">{title}</h2>}
+        {subtitle && <p className="mt-4 text-muted-foreground text-lg leading-relaxed">{subtitle}</p>}
       </div>
     )}
     {children}
