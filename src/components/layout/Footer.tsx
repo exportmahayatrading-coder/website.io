@@ -31,15 +31,6 @@ export const Footer = () => (
     </div>
 
     <div className="hairline-t">
-      <div className="container py-6 text-[11px] text-muted-foreground/80 leading-relaxed">
-        <span className="text-foreground/80 font-medium">Independent Trader Notice:</span>{" "}
-        Mahaya Amaal International FZC is an independent B2B trader and is not an authorised distributor for any of the brands referenced on this site.
-        All brand names and trademarks remain the property of their respective owners. Products sourced may include new, NOS (New Old Stock),
-        and surplus inventory from authorised channels. Serial number verification and condition reports provided on request.
-      </div>
-    </div>
-
-    <div className="hairline-t">
       <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
         <div>© {new Date().getFullYear()} Mahaya Amaal International FZC. All rights reserved.</div>
         <div className="flex items-center gap-5">
