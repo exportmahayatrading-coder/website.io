@@ -28,6 +28,15 @@ const Brands = () => (
           </Link>
         ))}
       </div>
+
+      <div className="mt-12 industrial-card p-6 md:p-7 border-l-2 border-l-primary/60">
+        <div className="mono text-[10px] tracking-[0.22em] uppercase text-primary mb-2">Independent Trader Notice</div>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Mahaya Amaal International FZC is an independent B2B trader and is not an authorised distributor for any of the brands listed above.
+          All brand names and trademarks remain the property of their respective owners. Products sourced may include new, NOS (New Old Stock),
+          and surplus inventory from authorised channels. Serial number verification and condition reports provided on request.
+        </p>
+      </div>
     </Section>
   </>
 );
