@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Globe } from "lucide-react";
+import { COMPANY } from "@/data/site";
 
 export const Footer = () => (
   <footer className="hairline-t mt-24 bg-surface">
@@ -8,20 +9,21 @@ export const Footer = () => (
         <div className="flex items-center gap-3 mb-5">
           <div className="h-9 w-9 grid place-items-center rounded-md bg-primary/10 border border-primary/30 text-primary font-display font-bold">M</div>
           <div className="leading-tight">
-            <div className="font-display font-semibold">Mahaya Amaal</div>
+            <div className="font-display font-semibold">{COMPANY.shortName}</div>
             <div className="text-[10px] text-muted-foreground tracking-[0.18em] uppercase">International FZC</div>
           </div>
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-          Strategic industrial procurement and supply chain support for the GCC's most demanding
-          infrastructure, energy and manufacturing operations.
+          {COMPANY.tagline}. {COMPANY.specialization}.
         </p>
         <div className="mt-6 space-y-2.5 text-sm">
-          <div className="flex items-start gap-2.5"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0"/><span><span className="text-foreground">Sharjah HQ</span> · SAIF Zone, UAE</span></div>
-          <div className="flex items-start gap-2.5"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0"/><span><span className="text-foreground">Dubai Office</span> · Business Bay, UAE</span></div>
-          <div className="flex items-center gap-2.5"><Phone className="h-4 w-4 text-primary shrink-0"/><a href="tel:+971600000000" className="text-muted-foreground hover:text-foreground">+971 6 000 0000</a></div>
-          <div className="flex items-center gap-2.5"><Mail className="h-4 w-4 text-primary shrink-0"/><a href="mailto:rfq@mahaya-amaal.com" className="text-muted-foreground hover:text-foreground">rfq@mahaya-amaal.com</a></div>
-          <div className="flex items-center gap-2.5"><MessageCircle className="h-4 w-4 text-primary shrink-0"/><a href="https://wa.me/971600000000" className="text-muted-foreground hover:text-foreground">WhatsApp Procurement Desk</a></div>
+          <div className="flex items-start gap-2.5"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0"/><span className="text-muted-foreground">{COMPANY.address}</span></div>
+          <div className="flex items-center gap-2.5"><Phone className="h-4 w-4 text-primary shrink-0"/><a href={COMPANY.phoneHref} className="text-muted-foreground hover:text-foreground">{COMPANY.phone} <span className="text-xs">({COMPANY.phoneLabel})</span></a></div>
+          {COMPANY.emails.map((e) => (
+            <div key={e.value} className="flex items-center gap-2.5"><Mail className="h-4 w-4 text-primary shrink-0"/><a href={`mailto:${e.value}`} className="text-muted-foreground hover:text-foreground">{e.value}</a></div>
+          ))}
+          <div className="flex items-center gap-2.5"><Globe className="h-4 w-4 text-primary shrink-0"/><a href={COMPANY.websiteHref} target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">{COMPANY.website}</a></div>
+          <div className="flex items-center gap-2.5"><MessageCircle className="h-4 w-4 text-primary shrink-0"/><a href={COMPANY.whatsappHref} target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">WhatsApp Procurement Desk</a></div>
         </div>
       </div>
 
@@ -32,7 +34,7 @@ export const Footer = () => (
 
     <div className="hairline-t">
       <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-        <div>© {new Date().getFullYear()} Mahaya Amaal International FZC. All rights reserved.</div>
+        <div>© {new Date().getFullYear()} {COMPANY.legalName}. All rights reserved.</div>
         <div className="flex items-center gap-5">
           <a href="#" className="hover:text-foreground">Privacy</a>
           <a href="#" className="hover:text-foreground">Terms</a>

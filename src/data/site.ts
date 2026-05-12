@@ -1,3 +1,23 @@
+export const COMPANY = {
+  legalName: "Mahaya Amaal International FZC",
+  shortName: "Mahaya Amaal",
+  tagline: "GCC's Premier Technical Procurement Solution for Vision 2030 Mega-Projects",
+  specialization: "Specialists in Schneider, Siemens, ABB, Eaton, Mitsubishi & Rockwell Products",
+  address: "Office B28-086, Block B, SRTI Park, Free Zone Authority, PO Box 237614, Sharjah, UAE",
+  addressShort: "SRTI Park, Sharjah, UAE",
+  phone: "+971 58 546 3566",
+  phoneHref: "tel:+971585463566",
+  phoneLabel: "Emergency Hotline",
+  whatsapp: "971585463566",
+  whatsappHref: "https://wa.me/971585463566",
+  emails: [
+    { label: "Export", value: "export.mahayatrading@gmail.com" },
+    { label: "Sales", value: "sales.mahaya@maiguae.com" },
+  ],
+  website: "www.maiguae.com",
+  websiteHref: "https://www.maiguae.com",
+};
+
 export const BRANDS = [
   { slug: "schneider", name: "Schneider Electric", tagline: "Power management & automation", color: "#3DCD58", categories: ["PLC", "VFD", "Switchgear", "PowerLogic", "Modicon"] },
   { slug: "abb", name: "ABB", tagline: "Electrification & robotics", color: "#FF000F", categories: ["Drives", "Robotics", "Motors", "Breakers", "DCS"] },

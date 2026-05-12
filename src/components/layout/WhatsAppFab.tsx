@@ -1,8 +1,9 @@
 import { MessageCircle } from "lucide-react";
+import { COMPANY } from "@/data/site";
 
 export const WhatsAppFab = () => (
   <a
-    href="https://wa.me/971600000000"
+    href={COMPANY.whatsappHref}
     target="_blank"
     rel="noreferrer"
     aria-label="WhatsApp procurement desk"

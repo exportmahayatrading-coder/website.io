@@ -4,8 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { Mail, Phone, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Clock, Globe } from "lucide-react";
 import { toast } from "sonner";
+import { COMPANY } from "@/data/site";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", company: "", email: "", message: "" });
@@ -37,10 +38,12 @@ const Contact = () => {
 
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: MapPin, t: "Headquarters", v: "SAIF Zone, Sharjah, United Arab Emirates" },
-              { icon: Phone, t: "Phone", v: "+971 (0) 6 000 0000" },
-              { icon: Mail, t: "Email", v: "rfq@mahaya-amaal.com" },
-              { icon: MessageCircle, t: "WhatsApp", v: "+971 50 000 0000 · 24/7" },
+              { icon: MapPin, t: "Headquarters", v: COMPANY.address },
+              { icon: Phone, t: `Phone (${COMPANY.phoneLabel})`, v: COMPANY.phone },
+              { icon: Mail, t: "Export Email", v: COMPANY.emails[0].value },
+              { icon: Mail, t: "Sales Email", v: COMPANY.emails[1].value },
+              { icon: Globe, t: "Website", v: COMPANY.website },
+              { icon: MessageCircle, t: "WhatsApp", v: `${COMPANY.phone} · 24/7` },
               { icon: Clock, t: "Emergency Desk", v: "72-hour engineered response, 365 days" },
             ].map((c) => (
               <div key={c.t} className="industrial-card p-5 flex items-start gap-4">
