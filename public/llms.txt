@@ -1,0 +1,27 @@
+# Mahaya Amaal International FZC
+
+> GCC's premier technical procurement solution for Vision 2030 mega-projects — sourcing industrial electrical, automation and control components across six GCC countries.
+
+Mahaya Amaal International FZC ("Mahaya Amaal") is a UAE-based export trading company specialised in fast procurement of critical industrial electrical equipment. We serve oil & gas, power & utilities, water & desalination, EPC & construction, petrochemicals, infrastructure and marine sectors across the Gulf region. Core offerings include sourcing and delivery of PLCs, VFDs, switchgear, UPS systems, DCS components and hazardous-area instrumentation from leading brands such as Schneider Electric, ABB, Siemens, Eaton, Mitsubishi Electric and Rockwell Automation. The company runs a 24/7 emergency hotline and maintains an intelligence hub tracking global component shortages, lead times and price trends to help procurement teams plan better.
+
+## Pages
+
+- [Home](/): Overview of services, key stats, shortage intelligence ticker and emergency hotline.
+- [About](/about): Company history, mission, values and why clients choose Mahaya Amaal.
+- [Services](/services): Detailed breakdown of procurement services including emergency sourcing, bulk supply, project support and after-sales.
+- [Brands](/brands): Catalog of represented manufacturers with category listings.
+- [Industries](/industries): Sector-specific procurement solutions for oil & gas, power, water, EPC, petrochemicals, metro, marine and critical facilities.
+- [Intelligence](/intelligence): Real-time shortage tracker, lead-time alerts and market intelligence reports on hard-to-find industrial components.
+- [Projects](/projects): Vision 2030 and other GCC mega-projects supported by Mahaya Amaal.
+- [Request a Quote](/rfq): RFQ portal where verified users can submit part requirements and track quotes.
+- [Partner With Us](/partner): Distributor and partner programme information.
+- [Contact](/contact): Office location, phone, WhatsApp, email and inquiry form.
+
+## Optional
+
+- [Schneider Electric](/brands/schneider): PLC, VFD, switchgear, PowerLogic and Modicon products.
+- [ABB](/brands/abb): Drives, robotics, motors, breakers and DCS.
+- [Siemens](/brands/siemens): SIMATIC, SINAMICS, SIRIUS, Sentron and energy products.
+- [Eaton](/brands/eaton): UPS, breakers, hydraulics and aerospace.
+- [Mitsubishi Electric](/brands/mitsubishi): MELSEC PLC, servo, HMI and inverters.
+- [Rockwell Automation](/brands/rockwell): ControlLogix, PowerFlex, Stratix and Kinetix.
